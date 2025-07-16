@@ -16,4 +16,4 @@ spring:
     password: 121805
     username: root
     #这里要更改数据库只需要更改voredb那个地方就可以了
-    url: jdbc:mysql://154.64.254.59:3306/new_bot?&useSSL=true&useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    url: jdbc:mysql://ip/new_bot?&useSSL=true&useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
