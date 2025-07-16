@@ -22,7 +22,7 @@ public class DingPlugin extends BotPlugin {
     @Override
     public int onPrivateMessage(Bot bot, PrivateMessageEvent event) {
         String reply = "";
-        reply = baseUtil.doThis(event);
+        reply = baseUtil.doThis(event, bot);
         if (null == reply) {
             return MESSAGE_IGNORE;
         }
@@ -33,11 +33,11 @@ public class DingPlugin extends BotPlugin {
     @Override
     public int onGroupMessage(Bot bot, GroupMessageEvent event) {
         String reply = "";
-        reply = baseUtil.doThis(event);
+        reply = baseUtil.doThis(event, bot);
         if (null == reply) {
             return MESSAGE_IGNORE;
         }
-        bot.sendGroupMsg(event.getGroupId(), reply, false);
+        bot.sendGroupMsg(event.getGroupId(), event.getUserId(),reply, false);
         return MESSAGE_IGNORE;
     }
 

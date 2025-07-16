@@ -1,6 +1,7 @@
 package com.akaxedx.newqqbot.tools.inter;
 
 import com.akaxedx.newqqbot.mappers.DingMapper;
+import com.mikuac.shiro.core.Bot;
 import com.mikuac.shiro.dto.event.message.MessageEvent;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -8,6 +9,6 @@ import org.springframework.stereotype.Component;
 @Component
 public interface BaseUtil {
 
-    String doThis(MessageEvent event);
+    String doThis(MessageEvent event, Bot bot);
 
 }
