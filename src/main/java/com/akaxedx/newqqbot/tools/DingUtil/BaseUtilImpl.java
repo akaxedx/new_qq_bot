@@ -313,12 +313,14 @@ public class BaseUtilImpl implements BaseUtil {
         reply = "@"+thisName+"："+reply;
 
         if (battleLength >= 30) {
+            dingMapper.deleteDing();
             bot.sendGroupMsg(groupId,reply,false);
             reply = String.format(BaseReplyConstant.BATTLE_WIN,
                     battleName,
                     battleLength);
         }
         if (thisLength >= 30) {
+            dingMapper.deleteDing();
             bot.sendGroupMsg(groupId,reply,false);
             reply = String.format(BaseReplyConstant.BATTLE_WIN,
                     thisName,
