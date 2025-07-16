@@ -11,4 +11,5 @@ public class Ding {
     private Long id;
     private Double length;
     private Integer has;
+    private Long time;
 }
