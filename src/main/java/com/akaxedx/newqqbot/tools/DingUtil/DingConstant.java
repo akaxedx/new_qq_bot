@@ -6,5 +6,5 @@ public class DingConstant {
     public static final String DING_GET="领取金箍棒";
     public static final String DING_CULTIVATE="培养";
     public static final String DING_BATTLE="对战";
-
+    public static final String DING_BANG="金箍榜";
 }

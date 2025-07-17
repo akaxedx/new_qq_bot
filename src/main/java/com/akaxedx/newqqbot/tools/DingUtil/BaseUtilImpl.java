@@ -44,6 +44,15 @@ public class BaseUtilImpl implements BaseUtil {
             case DingConstant.DING_BATTLE -> {
                 reply = battle(event, bot);
             }
+            case DingConstant.DING_BANG -> {
+                List<Ding> dings = dingMapper.selectDingBang();
+                reply = "金箍榜\n";
+                for (int i = 0; i < dings.size(); i++) {
+                    reply += "第" + (i+1) +"名：" +
+                            bot.getStrangerInfo(dings.get(i).getId(),false).getData().getNickname()+
+                            "，"+dings.get(i).getLength()+"m\n";
+                }
+            }
             default -> {
                 return null;
             }
@@ -256,7 +265,6 @@ public class BaseUtilImpl implements BaseUtil {
         }
         return "@"+userName+"："+ reply;
     }
-
     private String bLength(String thisName,String battleName, boolean lucky, boolean alive, Ding thisUser, double length, Ding battleUser,Bot bot,Long groupId) {
         Random r = new Random();
         String reply = null;
