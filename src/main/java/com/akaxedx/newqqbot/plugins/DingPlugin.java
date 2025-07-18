@@ -19,16 +19,6 @@ public class DingPlugin extends BotPlugin {
 
     @Autowired
     private BaseUtil baseUtil;
-    @Override
-    public int onPrivateMessage(Bot bot, PrivateMessageEvent event) {
-        String reply = "";
-        reply = baseUtil.doThis(event, bot);
-        if (null == reply) {
-            return MESSAGE_IGNORE;
-        }
-        bot.sendPrivateMsg(event.getUserId(), reply, false);
-        return MESSAGE_IGNORE;
-    }
 
     @Override
     public int onGroupMessage(Bot bot, GroupMessageEvent event) {
