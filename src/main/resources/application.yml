@@ -9,6 +9,7 @@ shiro:
       url: "/ws/demo"
   plugin-list:
     - com.akaxedx.newqqbot.plugins.DingPlugin
+    - com.akaxedx.newqqbot.plugins.AtPlugin
 #mysql配置
 spring:
   datasource:
@@ -16,4 +17,4 @@ spring:
     password: 121805
     username: root
     #这里要更改数据库只需要更改voredb那个地方就可以了
-    url: jdbc:mysql://ip/new_bot?&useSSL=true&useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    url: jdbc:mysql://localhost:3306/new_bot?&useSSL=true&useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
