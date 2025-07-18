@@ -19,13 +19,22 @@ public class AtPlugin extends BotPlugin {
     public int onGroupMessage(Bot bot, GroupMessageEvent event) {
         String reply = "";
         if (event.getMessage().equals("上号")) {
-            reply = "[CQ:at,qq=1939689768] " +
-                    "[CQ:at,qq=2712792122] " +
-                    "[CQ:at,qq=1365957941] " +
-                    "[CQ:at,qq=1394938659] " +
-                    "[CQ:at,qq=3530180056] " +
-                    "[CQ:at,qq=1050931105] " +
-                    "英雄集结，上号征战";
+            if (event.getGroupId().equals(923796903L)) {
+                reply = "[CQ:at,qq=1939689768] " +
+                        "[CQ:at,qq=2712792122] " +
+                        "[CQ:at,qq=1365957941] " +
+                        "[CQ:at,qq=1394938659] " +
+                        "[CQ:at,qq=3530180056] " +
+                        "[CQ:at,qq=1050931105] " +
+                        "英雄集结，上号征战";
+            }
+            if (event.getGroupId().equals(912990547L)) {
+                reply = "[CQ:at,qq=2223951483] " +
+                        "[CQ:at,qq=1365957941] " +
+                        "[CQ:at,qq=1836115798] " +
+                        "[CQ:at,qq=625888757] " +
+                        "英雄集结，上号征战";
+            }
             bot.sendGroupMsg(event.getGroupId(),reply, false);
         }
 
