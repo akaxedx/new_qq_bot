@@ -8,13 +8,20 @@ shiro:
       enable: true
       url: "/ws/demo"
   plugin-list:
-    - com.akaxedx.newqqbot.plugins.DingPlugin
     - com.akaxedx.newqqbot.plugins.AtPlugin
+    - com.akaxedx.newqqbot.plugins.LolPlugin
+    - com.akaxedx.newqqbot.plugins.RssPlugin
+    - com.akaxedx.newqqbot.plugins.SJZPlugin
 #mysql配置
+blog:
+  host: "你的host"
+  http-port: "3000"
+  blog-addr: "域名"
+coze:
+  key: "key"
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    password: 121805
-    username: root
-    #这里要更改数据库只需要更改voredb那个地方就可以了
-    url: jdbc:mysql://localhost:3306/new_bot?&useSSL=true&useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    password: QkjZPG37CzckKKiw
+    username: qq_bot
+    url: jdbc:mysql://localhost:3306/qq_bot?&useSSL=true&useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
